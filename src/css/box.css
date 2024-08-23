@@ -1,0 +1,107 @@
+
+.box-overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--section-color-2);
+  opacity: 0;
+  overflow-y: scroll;
+  z-index: 70;
+}
+
+.box-overlay.show {
+  display: block;
+  animation: show-box 0.3s ease-out forwards;
+}
+
+@keyframes show-box {
+  100% {
+    opacity: 1;
+  }
+}
+
+.box-overlay img {
+  width: 100%;
+}
+
+.close-btn {
+  font-size: 40px;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  top: -8px;
+  z-index: 1;
+}
+
+.close-btn i {
+  opacity: 1;
+}
+
+.box-overlay :where(.title, .caption, p, i) {
+  color: var(--title-color);
+}
+
+.box-overlay ul li {
+  margin-bottom: 12px !important;
+}
+
+.box-overlay ul p {
+  display: inline;
+  font-weight: 700;
+}
+
+.box-overlay ul span {
+  color: var(--main-color);
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.box-overlay .external-link {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.slide-number {
+  color: var(--main-color);
+  position: fixed;
+  left: 10px;
+  top: 12px;
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+.box-controler i {
+  opacity: 0.5;
+  pointer-events: visible;
+  cursor: pointer;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #999;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-controler i.prev {
+  margin-right: 12px;
+}
+
+.box-controler i:hover {
+  opacity: 1;
+}
+
+.box-controler i.disable {
+  opacity: 0.1;
+  pointer-events: none;
+}

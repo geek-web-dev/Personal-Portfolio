@@ -1,0 +1,28 @@
+:root {
+  --progress-bar-size: 123px;
+  --progress-path: 14px;
+  --font-size: 1.3rem;
+}
+
+.circular-progress {
+  width: var(--progress-bar-size);
+  height: var(--progress-bar-size);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle {
+  position: absolute;
+  width: calc(var(--progress-bar-size) - var(--progress-path));
+  height: calc(var(--progress-bar-size) - var(--progress-path));
+  border-radius: 50%;
+  background-color: var(--section-color-1);
+}
+
+.info {
+  position: relative;
+  font-size: var(--font-size);
+  font-weight: bold;
+}
